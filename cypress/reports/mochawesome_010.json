@@ -1,0 +1,114 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-02-26T03:56:17.179Z",
+    "end": "2023-02-26T03:56:43.759Z",
+    "duration": 26580,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "77d3170e-f4ec-4d9b-bfb9-2e80e3a3004b",
+      "title": "",
+      "fullFile": "cypress/integration/addchart.ts",
+      "file": "cypress/integration/addchart.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test add Product",
+          "fullTitle": "Test add Product",
+          "timedOut": null,
+          "duration": 14170,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsBackpack();\ndashboardPage.clickBackToProducts();\ndashboardPage.sauceLabsBackpack();\nchartPage.clickCart();\nchartPage.assertBacpackAndOnesie();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#add-to-cart-sauce-labs-backpack`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#add-to-cart-sauce-labs-backpack`, but never found it.\n    at DashboardPage.sauceLabsBackpack (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\addchart.ts:197:12)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\addchart.ts:112:19)",
+            "diff": null
+          },
+          "uuid": "682a3349-55c6-472c-9eb7-02d5f79590f6",
+          "parentUUID": "77d3170e-f4ec-4d9b-bfb9-2e80e3a3004b",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Remove Product",
+          "fullTitle": "Test Remove Product",
+          "timedOut": null,
+          "duration": 8742,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\ndashboardPage.sauceLabsBackpack();\ndashboardPage.clickBackToProducts();\ndashboardPage.sauceLabsOnisie();\nchartPage.clickCart();\nchartPage.assertBacpackAndOnesie();\nchartPage.removeBackpakandOnisie();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sauce Labs Bike Light' but never did.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sauce Labs Bike Light' but never did.\n    at DashboardPage.sauceLabsOnisie (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\addchart.ts:210:46)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\addchart.ts:121:19)",
+            "diff": null
+          },
+          "uuid": "9e918353-0bd8-4254-9672-eb5825d27234",
+          "parentUUID": "77d3170e-f4ec-4d9b-bfb9-2e80e3a3004b",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "682a3349-55c6-472c-9eb7-02d5f79590f6",
+        "9e918353-0bd8-4254-9672-eb5825d27234"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 22912,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

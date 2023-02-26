@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-02-26T04:01:31.046Z",
+    "end": "2023-02-26T04:02:10.275Z",
+    "duration": 39229,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dc4946f4-bb78-4d0f-be4e-d43056fc9be6",
+      "title": "",
+      "fullFile": "cypress/integration/addchart.ts",
+      "file": "cypress/integration/addchart.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test add Product",
+          "fullTitle": "Test add Product",
+          "timedOut": null,
+          "duration": 21878,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsBackpack();\ndashboardPage.clickBackToProducts();\ndashboardPage.sauceLabsBackpack();\nchartPage.clickCart();\nchartPage.assertBacpackAndOnesie();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#add-to-cart-sauce-labs-backpack`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#add-to-cart-sauce-labs-backpack`, but never found it.\n    at DashboardPage.sauceLabsBackpack (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\addchart.ts:197:12)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\addchart.ts:112:19)",
+            "diff": null
+          },
+          "uuid": "b5530037-56c0-4ed0-8595-3d02d559b2f2",
+          "parentUUID": "dc4946f4-bb78-4d0f-be4e-d43056fc9be6",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Remove Product",
+          "fullTitle": "Test Remove Product",
+          "timedOut": null,
+          "duration": 14937,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\ndashboardPage.sauceLabsBackpack();\ndashboardPage.clickBackToProducts();\ndashboardPage.sauceLabsOnisie();\nchartPage.clickCart();\nchartPage.assertBacpackAndOnesie();\nchartPage.removeBackpakandOnisie();",
+          "err": {},
+          "uuid": "0188993a-0aee-41d0-a9a6-f8a3065480a3",
+          "parentUUID": "dc4946f4-bb78-4d0f-be4e-d43056fc9be6",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "0188993a-0aee-41d0-a9a6-f8a3065480a3"
+      ],
+      "failures": [
+        "b5530037-56c0-4ed0-8595-3d02d559b2f2"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 36815,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
